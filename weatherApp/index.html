@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/0cbf8d5e79.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body style="background-image: url('images/bkwtbackground.jpg')">
+    <div class="container">
+      <div
+        class="weather-app"
+        style="background-image: url('images/clouds.jpg')"
+      >
+        <header id="current-time">Thursday 22:32</header>
+        <br />
+        <form id="city-form">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Enter City"
+            autocomplete="off"
+            autofocus="on"
+          />
+          <input type="submit" value="Search" />
+        </form>
+        <button id="current-location-button">Current Location</button>
+        <br />
+        <div class="current-card">
+          <div class="header">
+            <p>Currently</p>
+          </div>
+          <div class="card-body">
+            <p class="temp-now">
+              <span id="current-temp">9</span
+              ><span class="conversion"
+                ><a onclick="convertToCelcius()" href="javascript:void(0);">
+                  °C</a
+                >|<a
+                  onclick="convertToFahrenheight()"
+                  href="javascript:void(0);"
+                  >°F</a
+                ></span
+              >
+            </p>
+            <p class="status-now" id="current-status">Sunny with clouds</p>
+          </div>
+        </div>
+        <div class="location">
+          <div class="city" id="current-city">Toronto</div>
+          <div>Wind: 13km/hr</div>
+          <div>Humidity: 70%</div>
+          <div>High/Low: 20°C/9°C</div>
+        </div>
+        <br />
+        <br />
+        <div class="forcast-container">
+          <div class="forcast">Five Day Forcast:</div>
+          <ul>
+            <li>FRI</li>
+            <li>
+              <i class="fas fa-sun"></i>
+            </li>
+            <li>20°C/9°C</li>
+          </ul>
+          <ul>
+            <li>SAT</li>
+            <li>
+              <i class="fas fa-cloud"></i>
+            </li>
+            <li>19°C/7°C</li>
+          </ul>
+          <ul>
+            <li>SUN</li>
+            <li>
+              <i class="fas fa-bolt"></i>
+            </li>
+            <li>15°C/10°C</li>
+          </ul>
+          <ul>
+            <li>MON</li>
+            <li>
+              <i class="fas fa-cloud-showers-heavy"></i>
+            </li>
+            <li>17°C/9°C</li>
+          </ul>
+          <ul>
+            <li>TUE</li>
+            <li>
+              <i class="fas fa-cloud-sun"></i>
+            </li>
+            <li>20°C/12°C</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
