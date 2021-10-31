@@ -13,10 +13,15 @@ let day = days[now.getDay()];
 let hour = now.getHours();
 if (hour < 10) {
   `0${hour}`;
+} else {
+  hour;
 }
+
 let minute = now.getMinutes();
 if (minute < 10) {
   `0${minute}`;
+} else {
+  minute;
 }
 
 let header = document.querySelector("#current-time");
