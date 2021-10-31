@@ -107,3 +107,8 @@ li {
   text-align: center;
   padding: 0;
 }
+
+.code-link {
+  font-size: 14px;
+  color: grey;
+}
